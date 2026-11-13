@@ -1,193 +1,211 @@
 <p align="center">
-  <a href="https://github.com/dsh-tauri/deepseek-harness-desktop">
-    <img src="public/logo.svg" width="96" alt="DeepSeek Harness Tauri Desktop" />
-  </a>
+  <img src="mivo/brand/icon.svg" width="88" alt="Mivo logo" />
 </p>
 
-<h1 align="center">DSH Tauri 桌面版</h1>
-
+<h1 align="center">Mivo · 声藏</h1>
+<p align="center"><strong>Your Personal AI Memory</strong><br />Capture Everything. Remember Anything.</p>
+<p align="center">把录音与文字变成可追溯、可检索、由你掌握的个人知识。</p>
 <p align="center">
-  在桌面上运行 <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness</a> ——<br />
-  无需手动安装 Node.js、pnpm 或 Docker；普通安装首次启动可能需要联网初始化。
+  <a href="LICENSE-MIVO"><img src="https://img.shields.io/badge/Mivo_original_code-Apache--2.0-16836b" alt="Mivo 原创代码 Apache-2.0" /></a>
+  <a href="mivo/docs/licensing.md"><img src="https://img.shields.io/badge/Desktop_shell-restricted_license-orange" alt="桌面壳保留附加许可限制" /></a>
+  <a href="mivo/docs/acceptance.md"><img src="https://img.shields.io/badge/status-MVP_preview-64748b" alt="MVP preview" /></a>
+  <a href="https://FDEChina.ai"><img src="https://img.shields.io/badge/FDE前线-FDEChina.ai-16836b" alt="FDE 前线" /></a>
 </p>
-
 <p align="center">
-  <img alt="Windows" src="https://img.shields.io/badge/-Windows-blue?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB0PSIxNzI2MzA1OTcxMDA2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE1NDgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cGF0aCBkPSJNNTI3LjI3NTU1MTYxIDk2Ljk3MTAzMDEzdjM3My45OTIxMDY2N2g0OTQuNTEzNjE5NzVWMTUuMDI2NzU3NTN6TTUyNy4yNzU1NTE2MSA5MjguMzIzNTA4MTVsNDk0LjUxMzYxOTc1IDgwLjUyMDI4MDQ5di00NTUuNjc3NDcxNjFoLTQ5NC41MTM2MTk3NXpNNC42NzA0NTEzNiA0NzAuODMzNjgyOTdINDIyLjY3Njg1OTI1VjExMC41NjM2ODE5N2wtNDE4LjAwNjQwNzg5IDY5LjI1Nzc5NzUzek00LjY3MDQ1MTM2IDg0Ni43Njc1OTcwM0w0MjIuNjc2ODU5MjUgOTE0Ljg2MDMxMDEzVjU1My4xNjYzMTcwM0g0LjY3MDQ1MTM2eiIgcC1pZD0iMTU0OSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==" />
-  <img alt="MacOS" src="https://img.shields.io/badge/-MacOS-black?style=flat-square&logo=apple&logoColor=white" />
-  <img alt="Linux" src="https://img.shields.io/badge/-Linux-yellow?style=flat-square&logo=linux&logoColor=white" />
+  <a href="#快速开始">快速开始</a> · <a href="mivo/README.md">使用手册</a> · <a href="mivo/docs/architecture.md">开发文档</a> · <a href="CONTRIBUTING.md">参与贡献</a> · <a href="https://github.com/bingyue/mivo/issues">问题反馈</a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/dsh-tauri/deepseek-harness-desktop/releases">
-    <img src="https://img.shields.io/github/v/release/dsh-tauri/deepseek-harness-desktop?&label=Release&color=4D6BFE" alt="Release" />
-  </a>
-  <img src="https://img.shields.io/badge/DSH-0.2.1--rc.4-4d6bfe" alt="Recommended DSH 0.2.1-rc.4" />
-  <img src="https://img.shields.io/github/license/dsh-tauri/deepseek-harness-desktop" alt="MIT License" />
-  <br>
-  <img src="https://img.shields.io/github/downloads/dsh-tauri/deepseek-harness-desktop/total?&label=downloads&color=4D6BFE" alt="Downloads" />
-  <img src="https://img.shields.io/github/stars/dsh-tauri/deepseek-harness-desktop?&label=stars&color=4D6BFE" alt="Stars" />
-  <img src="https://img.shields.io/github/contributors/dsh-tauri/deepseek-harness-desktop?&label=contributors&color=4D6BFE" alt="Contributors" />
-  <img src="https://img.shields.io/github/commit-activity/m/dsh-tauri/deepseek-harness-desktop?&label=commits&color=4D6BFE" alt="Commit activity" />
-</p>
+> **许可范围：** Mivo 原创代码采用 **Apache-2.0**。当前桌面版基于社区 DeepSeek Harness Desktop，仍受其 MIT 及非商业衍生附加条款约束。**完整桌面版不是纯 Apache-2.0 项目，也不因此获得商业衍生许可。** 详情见[许可说明](mivo/docs/licensing.md)。
 
-<p align="center">
-  <samp><a href="https://dshtauri.mintlify.site/zh-CN/installation">Download</a> · <a href="./README.en.md">English</a> · <a href="./README.es.md">Español</a> · <a href="./README.ru.md">Русский</a> · <a href="./README.ko.md">한국어</a> · <a href="https://dshtauri.mintlify.site">文档</a> · <strong>中文</strong></samp>
-</p>
+## Mivo 是什么
 
-<p align="center">
-  <a href="https://trendshift.io/developers/13307?utm_source=developer-badge&amp;utm_medium=badge&amp;utm_campaign=badge-developer-13307" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/developers/13307" alt="hairyf | Trendshift" width="250" height="55"/></a>
-  <a href="https://trendshift.io/repositories/151676?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-151676" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/151676/weekly?language=Rust" alt="dsh-tauri%2Fdeepseek-harness-desktop | Trendshift" width="250" height="55"/></a>
-  <a href="https://trendshift.io/repositories/151676?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-151676" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/151676/daily?language=Rust" alt="dsh-tauri%2Fdeepseek-harness-desktop | Trendshift" width="250" height="55"/></a>
-</p>
+Mivo 是本地优先的个人 AI 记忆工作台。录音、文档和笔记保存到独立的 **Mivo Vault**；本机完成语音转写，云端模型在明确授权后生成分析草稿，只有你确认的内容才进入长期知识库。
 
-<img width="2280" height="1398" alt="image" src="https://github.com/user-attachments/assets/8e5d703b-8741-48ca-951b-a3ccaedcc531" />
+Mivo 复用 DeepSeek Harness 的 Agent、模型配置、凭据、插件、Skills 和工具调用能力，同时将个人知识与 DSH 会话数据分开保存。Mivo Core 可以独立运行，未来更换桌面壳或 Agent Runtime 时，知识库仍然属于你。
 
-## 功能
+![Mivo 原生桌面工作台：本地转写、原音播放与分析入口](mivo/docs/workbench.png)
 
-- 🪶 **原生桌面** — Tauri 2(Electron Runtime) + React 19 + Hero 3，内嵌本地 Harness 界面。
-- 📱 **远程连接** — Android / iOS 移动端扫码连接电脑上的 DSH，支持局域网与 Cloudflare 公网隧道。
-- 🔄 **运行时管理** — 安装依赖、选择内核版本，并提供桌面端与内核更新入口。
-- 🧩 **插件管理** — 12 个内置插件；支持本地路径安装、内置插件停用、社区插件安装、升级、卸载与错误查看。
-- 🗂️ **档案配置** — 分别管理插件与设置，支持一键迁移档案数据、备份、克隆；
-- 💽 **数据目录** — 安装时（Windows）可选择数据存放位置；能在设置里整体迁移与回滚。
-- ⌨️ **命令行集成** — 通过托管 shim 提供 `dsh` / `pnpm` 命令行工具，不是全局 npm 内核安装。
-- 🐾 **桌宠** — 由 `dsh-pet-lite` 预设插件提供，见下方「预设插件」。
-- 🎨 **个性化** — 8 种配色、本机界面缩放、终端模式，以及可调不透明度与可选磨砂模糊。
+*截图来自实际 macOS 应用，使用公开测试录音；不是静态界面示意图。*
 
-## 内置插件
+## 核心流程
 
-随桌面资源分发的一方插件：
+```mermaid
+flowchart LR
+    A[录音 / 文字 / 文档导入] --> B[本地转写与校稿]
+    B --> C[授权云端分析]
+    C --> D[分析草稿]
+    D --> E{用户确认}
+    E -->|确认| F[SQLite + Markdown 知识库]
+    E -->|暂不确认| D
+    F --> G[全文 / 向量检索与问答]
+    F --> H[独立只读 MCP]
+```
 
-- [DSH Tauri](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri) — 核心插件，桌面端与 Harness 通信、版本适配器、插件依赖管理
-- [DSH Tauri UI](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-ui) — 桌面设置界面、原生核心组件、主题与配色
-- [DSH Tauri Worktree](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-worktree) — 会话级 Git 工作树与检出
-- [DSH Tauri Extension](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-extension) — 官方插件管理、插件市场、Skills 与 MCP
-- [DSH Tauri Archive](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-archive) — 聊天归档与恢复
-- [DSH Pet Lite](https://github.com/hairyf/dsh-pet-lite) — 轻量桌宠预设插件，需在插件页自行安装
-- [DSH Tauri Rightclick Menu](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-rightclick) — 会话、工作区与正文右键菜单
-- [DSH Tauri Model](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-model) — 模型选择与参数、自动配置模型
-- [DSH Tauri Remote](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-remote) — SSH 远端 Harness 连接与同步，并把本机 Harness 分享到局域网或公网隧道
-- [DSH Tauri Notification](https://dshtauri.mintlify.site/zh-CN/built-in-plugins/dsh-tauri-notification) — 原生级会话通知与交互操作
+- **本地资料入口**：导入音频、视频、TXT、Markdown、PDF、DOCX、HTML、JSON、CSV，或直接输入笔记；原件按 SHA-256 去重。
+- **本地语音转写**：Whisper 使用 CPU 或兼容 CUDA 环境；模型按需下载并校验，不默认使用收费云端转写。源码环境保留 FunASR / SenseVoice 扩展。
+- **有证据的分析**：会议纪要、深度洞察、战略顾问、反方思考、行动提取、知识提取、内容创作和个人复盘八种模板，关联来源与逐字稿版本。
+- **确认后才记住**：分析先保存为草稿，人工确认后写入 Markdown、SQLite 和检索索引；AI 不覆盖原始录音。
+- **可追溯问答**：本地全文检索、商业 Embedding API、混合召回，以及带来源与时间范围的回答入口。
+- **独立 MCP**：9 个只读工具，连接范围限于指定 Vault，可供支持 MCP 的客户端使用。
+- **数据可带走**：JSON 导出、Markdown 文件、完整备份、空目录恢复和全文索引重建。
 
-## 可选预设
+## 当前状态
 
-启动引导提供以下社区插件，可按需安装；
+当前为 **0.1.0 MVP 预览版**。实现、测试通过与待验证的能力分别记录，不将接口存在视为验收完成。
 
-- [DSH Better Sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) — 按会话隔离的右编辑器侧栏
-- [DSH Office Kit](https://github.com/hairyf/dsh-office-kit) — Office 文档、PDF、演示文稿与表格
-- [DSH Market](https://github.com/dsh-market/dsh-market) — 社区插件市场
-- [DSH Rewind](https://github.com/SiriLee/dsh-rewind) — 对话回退与工作区备份
-- [DSH IM](https://github.com/xmanrui/dsh-im) — IM 渠道与机器人管理
-- [DSH OPS](https://github.com/T-Auto/dsh-ops) — 底层操作工具，减少 Token 消耗与任务耗时
-- [Billion Context](https://github.com/ranxianglei/billion-context) — 上下文压缩与历史恢复
+| 范围 | 当前证据 |
+| --- | --- |
+| macOS Apple Silicon | 原生应用与 DMG 构建、安装后重启、本地数据持久化已测试；未签名、未公证 |
+| Windows x64 | 已提供 NSIS 构建配置和手动工作流，尚未完成 Windows 实机验收 |
+| Mivo Core / MCP | 真实 SQLite、文件、HTTP、进程与 MCP SDK 测试，详见[验收记录](mivo/docs/acceptance.md) |
+| 本地 Whisper | 真实录音 CPU 转写、原音播放、校稿和模型下载已验证 |
+| 云端 AI | 已复用 DSH Provider 与 Agent；DeepSeek 模型列表接口连通性已验证，实际分析与跨录音回答仍待验收 |
+| 商业 Embedding | 已实现兼容 API 和混合检索，真实服务验收仍待配置 |
 
-新增或更新预设请提交 [Issue](https://github.com/dsh-tauri/deepseek-harness-desktop/issues)；可用版本由清单中的内核兼容规则决定。
+尚未验证 CUDA、FunASR / SenseVoice、真实麦克风和长会议录音准确率；没有说话人分离或 Metal 推理支持。第一版不提供本地 LLM、云同步、多用户、移动 App 或复杂知识图谱。请先使用测试资料评估。
 
 ## 快速开始
 
-从 [Releases](https://github.com/dsh-tauri/deepseek-harness-desktop/releases) 下载对应平台与架构的安装包：
+### 获取源码
 
-| 平台 | 要求 | 安装包 |
-| --- | --- | --- |
-| Windows | Windows 10+（内置 Chromium 内核） | x64 `.exe` / `.msi` |
-| macOS | macOS 12+（内置 Chromium 内核） | Intel / Apple Silicon `.dmg` |
-| Linux | 内置 Chromium 内核 | x64 `.AppImage` / `.deb` |
-
-macOS 也可通过 Homebrew 安装：
-
-```bash
-brew install dsh-tauri/desktop/deepseek-harness
+```sh
+git clone --recurse-submodules git@github.com:bingyue/mivo.git
+cd mivo
 ```
 
-Fedora 43+（x64 / ARM64）可通过 Copr 仓库安装，升级随 `dnf upgrade` 进行，应用内更新已关闭；想跟进预发布版可改装 `dsh-tauri-beta`（与 `dsh-tauri` 互斥，用 `sudo dnf swap dsh-tauri dsh-tauri-beta` 切换）：
+也可以使用 HTTPS 地址 `https://github.com/bingyue/mivo.git`。保留子模块与锁文件，避免与不兼容的上游版本混用。
 
-```bash
-sudo dnf copr enable fairyband/dsh-tauri
-sudo dnf install dsh-tauri        # 正式版
+### 独立运行 Mivo Core
+
+需要 [uv](https://docs.astral.sh/uv/) 和 Python 3.11。Core 不需要桌面壳或 DSH 才能进行导入、转写、检索、备份与 MCP 访问。
+
+```sh
+uv sync --project mivo/core --extra whisper
+uv run --project mivo/core --extra whisper mivo-core --vault /absolute/path/to/MivoVault
 ```
 
-- 普通安装包首次启动需联网下载缺失的运行时与内核；Git 功能需要可用的 Git。
-- 包含 `Bundle` 后缀为离线安装包（`_Bundle_*.exe`、`_Bundle_*.deb`、两种 `_Bundle_*.dmg`）。
-- 本地运行不等于完全离线：模型服务、插件安装、更新与桌宠预设素材仍可能联网。
-- Linux 显示、Wayland、AppImage 与权限问题的处理见[安装与故障排查文档](https://dshtauri.mintlify.site/zh-CN/help/troubleshooting)。
+Core 只监听本机回环地址，启动时输出连接握手和随机访问令牌。不要把握手内容贴到公开 Issue。桌面版自动管理这个进程；独立 HTTP 使用方式见[架构说明](mivo/docs/architecture.md)。
 
-### 桌面代理
+### 构建桌面版
 
-- 在**配置 → 应用 → 代理地址**设置 HTTP、HTTPS、SOCKS5 或 SOCKS5H 代理。
-- 仅用于桌面端依赖/内核下载、更新检查及插件元数据，不修改模型请求或插件子进程的网络配置。
-- 留空沿用系统/环境代理；保存后对新请求生效，可重试失败的下载。
-- SOCKS5H 通过代理解析目标域名；本机回环连接始终直连。
+需要 Node.js ≥ 24.9、pnpm 11.7.0、Rust stable 和 uv。macOS 需要 Xcode Command Line Tools；Windows 需要 MSVC Build Tools。首次安装依赖需要联网。
 
-## 移动端支持
+```sh
+git submodule update --init --recursive
+pnpm install --frozen-lockfile --ignore-scripts
+pnpm mivo:test
+pnpm mivo:build
+```
 
-**DSH Mobile** 通过局域网或公网隧道访问电脑上的 Harness，不在手机运行内核。
+`mivo:build` 检查桌面许可模式、准备固定版本 Runtime、冻结 Core，并按平台打包。默认 `MIVO_DISTRIBUTION_MODE=personal_noncommercial`；当前桌面壳的 `commercial` 构建会被拒绝。这一门禁不限制独立 Apache-2.0 Mivo Core 的许可。
 
-- **Android**：从 [Releases](https://github.com/dsh-tauri/deepseek-harness-desktop/releases) 下载 APK。
-- **iOS**：通过 [TestFlight 邀请](https://testflight.apple.com/join/kYXkpnp1)安装测试版，以审核与名额为准；Release 中的未签名 IPA 需自行签名。
+macOS 本地启动：
 
-在桌面顶部**远程**开启分享，手机扫码配对；电脑、Harness 与所用隧道须在线。远程访问并非只读，请勿公开二维码或访问码，详见[手机远程访问指南](https://dshtauri.mintlify.site/zh-CN/guides/mobile-remote-access)。
+```sh
+open apps/desktop/src-tauri/target/release/bundle/macos/Mivo.app
+```
 
-移动端仅在官方移动服务推出前维护；开发说明见[移动端规范](docs/specs/native.md)。
+产物位于 `apps/desktop/src-tauri/target/release/bundle/`。本仓库首批公开内容为源码，不提供经过发行合规审核的公共安装包；本地构建记录不等于公开发行授权。
 
-## 运行方式
+## 配置模型
 
-Windows 启动失败时会通过原生对话框显示具体错误。若出现 `STARTUP_LOW_INTEGRITY`：
+### 云端大模型：复用 DSH
 
-- 进程低于 Medium 完整性级别，无法写入正常用户数据；更新后的程序可能继承安装目录的 Low 标签。
-- 用 `icacls` 检查目录与程序；将可信安装恢复为 Medium，或重新安装到正常目录。
-- 以管理员身份运行不会移除 Low 标签限制；无需删除会话或修改 `DSH_HOME`。
+在桌面应用的模型设置中添加提供商。对提供 **OpenAI Chat Completions 兼容协议**的云服务，使用现有“自定义提供商”，填写：
 
-| 当前基线 | 版本 |
+1. Provider ID 与显示名称。
+2. 服务商提供的 Base URL。
+3. API 协议：`OpenAI Chat Completions`。
+4. API Key 与实际模型 ID；支持模型发现的服务可获取模型列表，也可手动添加。
+
+可用于 DeepSeek、OpenAI，以及提供相应兼容接口的 Qwen、GLM、Kimi 等服务。Claude 可走 DSH 的 Anthropic 协议或对应服务商的兼容网关。是否支持流式响应、工具调用与特定参数取决于服务商和模型，**不宣称所有供应商均已实测**。分析工具链需要模型支持工具调用。
+
+DeepSeek 官方 Base URL 为 `https://api.deepseek.com`；本次模型列表查询返回 `deepseek-flash`、`deepseek-v4-pro`。请以服务商当前文档和账号实际可用模型为准，参见 [DeepSeek API 文档](https://api-docs.deepseek.com/)。
+
+Mivo 不重复实现模型管理器，不在源码或 Vault 中保存另一份 LLM 密钥。没有模型配置也能使用本地导入与转写。生成草稿或回答前，界面会明确提示哪些文字将发送到所选云端服务。
+
+### 商业 Embedding
+
+为启动 Mivo 的进程配置以下环境变量，再重启应用：
+
+| 变量 | 内容 |
 | --- | --- |
-| 推荐 Harness 内核 | `0.2.1-rc.4` |
-| 支持的内核最低版本 | `0.2.1-rc.4`，不保证所有插件兼容 |
+| `MIVO_EMBEDDING_URL` | 服务商完整的 HTTPS embeddings 接口地址 |
+| `MIVO_EMBEDDING_MODEL` | 实际 Embedding 模型 ID |
+| `MIVO_EMBEDDING_API_KEY` | 通过本机环境或秘密管理器注入的密钥 |
 
-更早内核不再支持；旧兼容记录仅保留历史事实，不代表当前支持范围。
+在「Vault 与 MCP」中授权建立向量索引。只发送已确认知识片段；语义查询还会发送查询文字。聊天模型与 Embedding 服务是独立配置，没有向量服务时仍可使用全文检索。
 
-- 内核与预设选择遵循[资源清单](<./src-tauri/resources/manifest.jsonc>)及插件声明的版本范围；不保证任意最新上游版本都兼容。
-- 正式版默认启用 CLI 集成：Windows / macOS / Linux 自动更新 PATH。需重新打开终端，其他 shell 仍需要手动配置。
+## 连接 MCP 客户端
 
-## 交流
+先创建 Vault。在支持 stdio MCP 的客户端中使用以下配置，将路径替换为本机绝对路径；桌面版也会显示打包后的真实 Core 命令。
 
-<table>
-  <tr>
-    <td align="center"><img src="./docs/images/community/qq.png" width="180" height="180" alt="QQ 群二维码" /><br /><strong>QQ 群</strong></td>
-    <td align="center"><img src="./docs/images/community/wechat.png" width="180" height="180" alt="微信群二维码" /><br /><strong>微信群(已满,请先加微信) →</strong></td>
-    <td align="center"><img src="./docs/images/community/wechat-hairy.png" width="180" height="180" alt="微信群二维码" /><br /><strong>微信</strong></td>
-  </tr>
-</table>
+```json
+{
+  "mcpServers": {
+    "mivo": {
+      "command": "uv",
+      "args": [
+        "--directory", "/absolute/path/to/mivo",
+        "run", "--project", "mivo/core",
+        "mivo-mcp", "--vault", "/absolute/path/to/MivoVault"
+      ]
+    }
+  }
+}
+```
 
-## 开发
+工具包括 `search_memories`、`list_recordings`、`get_transcript`、`get_memory`、`get_topic_context`、`get_person_context`、`get_project_context`、`get_timeline`、`search_tasks`。没有写入工具；连接外部 AI 客户端意味着允许它读取工具返回的内容。
 
-参见[中文开发指南](<./docs/DEVELOPMENT.zh.md>)或[英文开发指南](<./docs/DEVELOPMENT.md>)。功能详情见[在线文档](https://dshtauri.mintlify.site)。
+## 数据与隐私
 
-## 说明
+```text
+MivoVault/
+├── originals/      原始录音、视频和文档
+├── transcripts/    版本化逐字稿
+├── knowledge/      确认后的 Markdown 知识
+├── database/       SQLite、全文索引、向量和任务
+├── models/         独立 ASR 模型，不进入知识备份
+├── exports/        导出内容
+└── backups/        含校验清单的完整备份
+```
 
-> [!WARNING]
-> **开发预览** — 上游 `dsh` 仍在快速迭代，可能存在破坏性变更；升级前请确认兼容性。
+原始音频默认不上传。分析草稿不会自动进入永久记忆。Mivo Core 与 MCP 限制访问已授权 Vault，DSH Agent 通过受限业务工具读取资料，不把 Vault 直接作为 Shell 工作目录。
 
-> [!NOTE]
-> **安全声明** — `dsh` 具备本地代码执行能力。仅供学习 / 研究 / 测试，请在可信、隔离的环境中使用。
+本地运行不等于系统级安全沙箱：本机管理员、其他有文件权限的应用，以及用户主动安装的插件仍可能访问文件。请仅安装可信插件。安全问题的报告方式见 [SECURITY.md](SECURITY.md)。
 
-## 社区推荐
+## 开发与贡献
 
-- [dsh-tauri-notify-webhook](https://github.com/iuuuuuuuu/dsh-tauri-notify-webhook) — 任务异常停止或完成时把通知转发到 webhook、邮件（SMTP）或 pushplus by @iuuuuuuuu
-- [dsh-pdf-reader](https://github.com/SkanderBog/dsh-pdf-reader) — 按页 PDF 阅读、本地 OCR、引用、搜索和视觉裁剪 by @SkanderBog
-- [dsh-context-manager](https://github.com/SkanderBog/dsh-context-manager) — 应用前审阅上下文，并按完整历史组选择保留、总结或省略较早内容 by @SkanderBog
-- [@ryuu-64/dsh-find-all](https://github.com/Ryuu-64/dsh-find-all) — 在当前对话中按 Ctrl+F，查找已保存的历史内容 by @Ryuu-64
+| 目录 | 职责 |
+| --- | --- |
+| `mivo/core` | 独立记忆引擎、本地 API、ASR 和 MCP |
+| `packages/mivo-memory` | DSH Host 插件、受限工具、模型与 Core 连接 |
+| `packages/mivo-workbench` | Mivo 工作台 UI 插件 |
+| `packages/mivo-bundle` | 插件装配和分析 Skills |
+| `apps/desktop` | 保留上游许可的桌面壳及应用层修改 |
+| `source/deepseek-harness` | 未修改的官方 DSH 子模块 |
+| `mivo/docs` | 审计、架构、许可和真实验收记录 |
 
-## 相关项目
+```sh
+pnpm mivo:test
+pnpm --filter mivo-memory typecheck
+pnpm --filter mivo-workbench typecheck
+```
 
-- [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — 上游 `dsh` agent 平台
-- [deepseek-harness-pkg](https://github.com/dsh-tauri/deepseek-harness-pkg) — 预打包 Harness 发行版与下载源
-- [electron-rs](https://github.com/hairyf/electron-rs) · [tauri-runtime-electron](https://github.com/hairyf/tauri-runtime-electron) — Electron Rust 与 Tauri 2 的 Electron 运行时
-- [dsh-pet-lite](https://github.com/hairyf/dsh-pet-lite) · [dsh-pet](https://github.com/PC2005-cloud/dsh-pet) · [dsh-pet-component](https://github.com/dsh-tauri/dsh-pet-component) — 桌宠插件、素材与渲染组件
-- [dsh-plugin-codex-pets](https://github.com/Skylarking/dsh-plugin-codex-pets) · [BongoCat](https://github.com/ayangweb/BongoCat) · [dsh-dafeiyu](https://github.com/QCYTSN/dsh-dafeiyu) · [codex-to-dsh-pet](https://github.com/Signalight/codex-to-dsh-pet) · [dsh-pet-sticker](https://github.com/PC2005-cloud/dsh-pet-sticker) — 桌宠参考项目
+接口改动后按[开发说明](mivo/docs/architecture.md)生成 Mivo API。云端综合验收使用[独立脚本](mivo/docs/cloud-acceptance.md)，显式执行才会产生服务商 API 用量。自动 CI 不需要 API Key，也不调用付费模型。
 
-## Contributors
+欢迎提交可复现问题、测试、文档和代码改进。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；近期工作与已知限制见 [CHANGELOG.md](CHANGELOG.md) 和[验收记录](mivo/docs/acceptance.md)。
 
-![Contributors](https://contrib.rocks/image?repo=dsh-tauri/deepseek-harness-desktop)
+## 作者
 
-## License
+- **作者：邴越** · GitHub [@bingyue](https://github.com/bingyue)
+- **全网 IP：越哥聊AI**
+- **FDE 前线：[FDEChina.ai](https://FDEChina.ai)**
 
-[MIT](<./LICENSE>)，附加[非商用条款](<./LICENSE.details>) © deepseek-harness-desktop contributors
+## 许可证与致谢
+
+Mivo 原创代码使用 [Apache License 2.0](LICENSE-MIVO)，版权与适用范围见 [NOTICE](NOTICE)。使用、修改和再分发第三方部分时，仍须遵守它们各自的许可证。
+
+当前社区桌面壳保留 [LICENSE](LICENSE) 与 [LICENSE.details](LICENSE.details)；桌面壳衍生改动和对应补丁不被重新标记为 Apache-2.0。独立 Mivo Core 与包含受限桌面壳的整套应用，是不同的许可范围。商业桌面衍生需取得上游许可或替换受限壳，详见[许可说明](mivo/docs/licensing.md)和[第三方声明](mivo/THIRD_PARTY_NOTICES.md)。
+
+感谢 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)、[社区桌面壳](https://github.com/dsh-tauri/deepseek-harness-desktop)、Whisper、faster-whisper、FunASR、MCP、SQLite 及其他依赖项目。上游历史、许可证和[原始 README](README.upstream.md)均保留。Mivo 是独立项目，不代表 DeepSeek 官方产品或背书。

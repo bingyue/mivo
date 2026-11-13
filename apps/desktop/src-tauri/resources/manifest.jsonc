@@ -1,8 +1,6 @@
 {
   "engines": {
     "dsh": {
-      // 离线包随包内核、下载目标与更新提示都跟随 pkg 仓库的最新稳定发行版；
-      // 清单不再声明「推荐版本」，也没有固定的随包版本。
       "minimum": "0.2.2-rc.1"
     },
     "pnpm": {
@@ -18,24 +16,18 @@
     }
   },
   "dependencies": {
-    // 依赖映射规范：AppData 的 dependencies.json 只记录每个依赖的安装根
-    // （null = 用系统环境）；入口相对路径与默认托管根以本表为准。
-    // managedRoot / 映射值支持三种形态：
-    //   $AppData/...    AppData 数据目录（debug 构建为 <base>/dev 的同级）
-    //   $Resources/...  安装包资源目录（`resources/...` 为等价旧写法）
-    //   绝对路径         任意位置（如加载本地捆绑版内核）
     "pnpm": {
       "engine": ">=11.7.0",
       "entry": "bin/pnpm.cjs",
-      "managedRoot": "$AppData/dependencies/pnpm",
-      "overridable": true
+      "managedRoot": "$Resources/pnpm",
+      "overridable": false
     },
     "dsh": {
       "engine": {
         "minimum": "0.2.2-rc.1"
       },
       "entry": "node_modules/@deepseek-ai/dsh/lib/bin.js",
-      "managedRoot": "$AppData/dependencies/dsh",
+      "managedRoot": "$Resources/dsh",
       "overridable": true
     },
     "git": {
@@ -72,6 +64,21 @@
       "dsh-tauri-worktree"
     ],
     "built-in": [
+      {
+        "id": "mivo-bundle",
+        "spec": "mivo-bundle",
+        "name": "Mivo Product Bundle"
+      },
+      {
+        "id": "mivo-memory",
+        "spec": "mivo-memory",
+        "name": "Mivo Memory"
+      },
+      {
+        "id": "mivo-workbench",
+        "spec": "mivo-workbench",
+        "name": "Mivo Workbench"
+      },
       {
         "id": "dsh-taiwind",
         "spec": "dsh-taiwind",
@@ -135,7 +142,7 @@
         "description": "把 New API 站点接入 DSH 的模型供应商：设备授权登录、按渠道分组的三级模型/分组/推理强度选择器与模型白名单。 ｜ Sign in to a New API deployment (NearToken) from the settings page: device authorization, a three-level model / group / reasoning-effort picker, and a model whitelist.",
         "repo": "https://github.com/HuanLinOTO/dsh-neartoken",
         "recommended": true,
-        "checked": true,
+        "checked": false,
         "version": "latest"
       },
       {
@@ -145,7 +152,7 @@
         "description": "开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages.",
         "repo": "https://github.com/omdsh-dev/DSH-better-sidebar",
         "recommended": true,
-        "checked": true,
+        "checked": false,
         "version": "latest"
       },
       {
@@ -155,7 +162,7 @@
         "description": "便捷无感的同窗口内对话回退，从不新建分支；自带轻量工作区备份，可一并还原文件（Claude Code /rewind 语义）。 · DSH plugin: effortless in-window conversation rewind — never forking a new session; ships a lightweight workspace backup that restores files together with the rewind (Claude Code /rewind semantics).",
         "repo": "https://github.com/SiriLee/dsh-rewind",
         "recommended": true,
-        "checked": true,
+        "checked": false,
         "version": "latest"
       },
       {

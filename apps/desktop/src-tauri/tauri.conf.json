@@ -1,11 +1,11 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "DSH Tauri",
-  "version": "0.31.4",
-  "identifier": "dsh-tauri",
+  "productName": "Mivo",
+  "version": "0.1.0",
+  "identifier": "com.mivo.desktop",
   "build": {
-    "beforeBuildCommand": "pnpm -w build:plugins && pnpm build",
-    "beforeBundleCommand": "node ../../crates/tauri-runtime-electron/tools/macos-sign/sign.mjs",
+    "beforeBuildCommand": "node ../../mivo/scripts/check-resources.mjs && pnpm -w mivo:plugins && pnpm -w build:plugins && pnpm build",
+    "beforeBundleCommand": "node ../../mivo/scripts/before-bundle.mjs",
     "frontendDist": "../dist"
   },
   "app": {
@@ -48,7 +48,7 @@
       "icons/32x32.png": "icons/32x32.png"
     },
     "licenseFile": "licenses/INSTALLER-LICENSE.txt",
-    "category": "DeveloperTool",
+    "category": "Productivity",
     "macOS": {
       "minimumSystemVersion": "12.0",
       "hardenedRuntime": true,

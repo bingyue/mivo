@@ -1,0 +1,5 @@
+- insert:
+    - id: mivo-workbench
+      name: mivo-workbench
+    - id: mivo-memory
+      name: mivo-memory

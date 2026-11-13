@@ -40,6 +40,15 @@ fn release_tag(version: &str) -> Option<String> {
 
 pub async fn about(app_handle: &crate::AppHandle) -> DesktopAboutInfo {
     let version = current_version();
+    if env!("DSH_APP_IDENTIFIER") == "com.mivo.desktop" {
+        return DesktopAboutInfo {
+            version,
+            published_at: String::new(),
+            copyright: format!("Mivo · Personal noncommercial. {COPYRIGHT}"),
+            repo: REPO_URL.to_string(),
+            powered_by: format!("Mivo Core · {POWERED_BY}"),
+        };
+    }
     let published_at = match release_tag(&version) {
         Some(tag) => fetch_tag_published_at(app_handle, &tag)
             .await

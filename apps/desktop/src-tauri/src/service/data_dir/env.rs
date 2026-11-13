@@ -15,7 +15,7 @@ use std::path::PathBuf;
 use crate::config::{DSH_HOME_DEV_DIR_NAME, DSH_HOME_DIR_NAME};
 
 /// 数据目录环境变量名（官方 dsh、桌面端与 CLI shim 共用同一个值）
-pub(super) const DATA_DIR_ENV: &str = "DSH_HOME";
+pub(super) const DATA_DIR_ENV: &str = "MIVO_DSH_HOME";
 
 /// 未设置 `DSH_HOME` 时的默认数据目录（release `~/.dsh`，debug `~/.dsh.dev`）。
 ///

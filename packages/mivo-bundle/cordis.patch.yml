@@ -1,0 +1,12 @@
+- insert:
+    - id: mivo-memory
+      name: mivo-memory
+    - id: mivo-workbench
+      name: mivo-workbench
+- id: dsh-tauri-model
+  config:
+    credentialOnboarding: false
+- id: ui-settings-account
+  config:
+    step: done
+    completion: skipped

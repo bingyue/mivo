@@ -31,12 +31,12 @@ use super::env::DATA_DIR_ENV;
 ///
 /// 与 PATH 注入块（`cli::path::rc` 的 `RC_MARK_*`）**必须是不同的标记**：同一个
 /// 文件里两份块各自只认得自己的标记，否则后写的一份会把前一份删掉。
-const PROFILE_MARK_START: &str = "# >>> deepseek-harness dsh home >>>";
-const PROFILE_MARK_END: &str = "# <<< deepseek-harness dsh home <<<";
+const PROFILE_MARK_START: &str = "# >>> mivo dsh home >>>";
+const PROFILE_MARK_END: &str = "# <<< mivo dsh home <<<";
 
 /// Linux 的 systemd 用户会话变量文件（相对 `$HOME`）。
 #[cfg(target_os = "linux")]
-const ENVIRONMENT_D_FILE: &str = ".config/environment.d/dsh-tauri.conf";
+const ENVIRONMENT_D_FILE: &str = ".config/environment.d/mivo.conf";
 
 /// macOS LaunchAgent 文件名（相对 `$HOME`）。
 #[cfg(target_os = "macos")]
@@ -484,7 +484,7 @@ mod tests {
         let value = "/Volumes/Data/D$SH Home`x`\"q\"";
         let block = profile_block(value);
         assert!(block.starts_with(PROFILE_MARK_START));
-        assert!(block.contains("export DSH_HOME=\"/Volumes/Data/D\\$SH Home\\`x\\`\\\"q\\\"\""));
+        assert!(block.contains("export MIVO_DSH_HOME=\"/Volumes/Data/D\\$SH Home\\`x\\`\\\"q\\\"\""));
         assert_eq!(parse_profile_block(&block), Some(value.to_string()));
     }
 
@@ -502,7 +502,7 @@ mod tests {
     fn parse_profile_block_ignores_foreign_exports() {
         let content = format!("{PROFILE_MARK_START}\nexport OTHER=x\n{PROFILE_MARK_END}\n");
         assert_eq!(parse_profile_block(&content), None);
-        assert_eq!(parse_profile_block("export DSH_HOME=/data/dsh\n"), None);
+        assert_eq!(parse_profile_block("export MIVO_DSH_HOME=/data/dsh\n"), None);
     }
 
     #[test]
@@ -519,8 +519,8 @@ mod tests {
         assert_eq!(quote_environment_d("/data/dsh"), "/data/dsh");
         assert_eq!(quote_environment_d("/data/D$SH"), "/data/D$$SH");
         assert_eq!(quote_environment_d("C:\\data"), "C:\\data");
-        assert_eq!(parse_environment_d("# c\nDSH_HOME=\"/data/dsh\"\n"), Some("/data/dsh".to_string()));
-        assert_eq!(parse_environment_d("DSH_HOME=\n"), None);
+        assert_eq!(parse_environment_d("# c\nMIVO_DSH_HOME=\"/data/dsh\"\n"), Some("/data/dsh".to_string()));
+        assert_eq!(parse_environment_d("MIVO_DSH_HOME=\n"), None);
     }
 
     #[cfg(target_os = "macos")]

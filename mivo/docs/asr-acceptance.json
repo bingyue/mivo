@@ -1,0 +1,23 @@
+{
+  "sample_url": "https://github.com/ggml-org/whisper.cpp/blob/master/samples/jfk.wav",
+  "provider": "faster-whisper 1.2.1",
+  "model": "Systran/faster-whisper-tiny",
+  "device": "cpu",
+  "result": "passed",
+  "transcript": {
+    "source_id": "3001c51455854db0a981807445d79d4a",
+    "revision": 1,
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 11.0,
+        "text": " And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+        "speaker": null
+      }
+    ],
+    "text": " And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+    "engine": "whisper",
+    "created_at": "2026-11-12T18:22:34.822448+00:00"
+  },
+  "original_sha256": "59dfb9a4acb36fe2a2affc14bacbee2920ff435cb13cc314a08c13f66ba7860e"
+}

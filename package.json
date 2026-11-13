@@ -4,7 +4,7 @@
   "version": "0.31.4",
   "private": true,
   "packageManager": "pnpm@11.7.0",
-  "description": "Electron Runtime infrastructure for DeepSeek Harness",
+  "description": "Mivo personal AI memory workspace built on DeepSeek Harness Desktop; component licenses apply",
   "scripts": {
     "dev": "pnpm --filter dsh-desktop dev",
     "build": "pnpm --filter dsh-desktop build",
@@ -32,7 +32,16 @@
     "typecheck:native": "pnpm --filter dsh-native typecheck",
     "genapi": "pnpm --filter dsh-tauri-config run genapi",
     "release": "bumpp --pr",
-    "build:plugins": "tsx scripts/build-plugins.ts"
+    "build:plugins": "tsx scripts/build-plugins.ts",
+    "mivo:check": "node mivo/scripts/distribution-guard.mjs",
+    "mivo:core": "uv run --project mivo/core --extra whisper mivo-core",
+    "mivo:test": "uv run --project mivo/core --extra whisper pytest -q -c mivo/core/pyproject.toml mivo/core/tests",
+    "mivo:plugins": "pnpm --filter mivo-memory build && pnpm --filter mivo-workbench build",
+    "mivo:build": "pnpm mivo:prepare && node mivo/scripts/build-desktop.mjs",
+    "mivo:resources": "uv run --project mivo/core --extra whisper python mivo/scripts/prepare-resources.py",
+    "mivo:freeze": "uv run --project mivo/core --extra whisper python mivo/scripts/build-core.py",
+    "mivo:licenses": "uv run --project mivo/core --extra whisper python mivo/scripts/license-inventory.py",
+    "mivo:prepare": "pnpm mivo:check && pnpm mivo:resources && pnpm mivo:freeze && pnpm mivo:licenses"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:lint",

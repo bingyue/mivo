@@ -1,0 +1,8 @@
+{
+  "kind": "real-second-recording-local-ASR",
+  "source_url": "https://github.com/realpython/python-speech-recognition/blob/master/audio_files/harvard.wav",
+  "audio_sha256": "971b4163670445c415c6b0fb6813c38093409ecac2f6b4d429ae3574d24ad470",
+  "segment_count": 6,
+  "duration": 17.83,
+  "cloud_called": false
+}

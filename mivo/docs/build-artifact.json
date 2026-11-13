@@ -1,0 +1,10 @@
+{
+  "file": "apps/desktop/src-tauri/target/release/bundle/dmg/Mivo_0.1.0_aarch64.dmg",
+  "bytes": 386400042,
+  "sha256": "8ba2edbef56cf8bc59194a5a230aec884074917b00cf1461bd9778586a86b4b0",
+  "platform": "macOS arm64",
+  "mode": "personal_noncommercial",
+  "developer_id_signed": false,
+  "notarized": false,
+  "model_weights_bundled": false
+}

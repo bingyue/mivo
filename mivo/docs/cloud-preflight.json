@@ -1,0 +1,23 @@
+{
+  "status": "blocked",
+  "cloudCalled": false,
+  "checkedAt": "2026-11-12T19:42:11.209Z",
+  "missing": [
+    "MIVO_ACCEPTANCE_PROVIDER and MIVO_ACCEPTANCE_MODEL",
+    "Commercial Embedding environment configuration",
+    "Selected provider/model is not available in the actual DSH runtime"
+  ],
+  "checks": [
+    "Actual DSH model discovery and denied-consent request verified"
+  ],
+  "providers": [
+    {
+      "id": "deepseek-official",
+      "models": []
+    },
+    {
+      "id": "deepseek-account",
+      "models": []
+    }
+  ]
+}

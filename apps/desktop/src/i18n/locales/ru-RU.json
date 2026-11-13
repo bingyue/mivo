@@ -1,7 +1,7 @@
 {
   "app.wordmark": "HARNESS",
   "app.retry": "Повторить",
-  "app.open_editor": "Открыть DeepSeek Harness",
+  "app.open_editor": "Открыть Mivo",
   "app.restart": "Перезапустить",
   "messages.harness_restarting": "Перезапуск Harness…",
   "messages.harness_restarted": "Harness перезапущен",
@@ -160,7 +160,7 @@
   "ui.node_version": "Среда Node.js",
   "ui.platform": "Платформа",
   "ui.data_dir": "Каталог данных",
-  "ui.webview_error": "Не удалось загрузить интерфейс DeepSeek Harness.",
+  "ui.webview_error": "Не удалось загрузить интерфейс Mivo.",
   "ui.ensure_running": "Убедитесь, что служба запущена по адресу {{url}}.",
   "ui.webview_unreachable_hint": "Сама служба работает, но встроенная страница никогда не загрузилась. Обычно это системный прокси или средство безопасности, блокирующее запрос, или перенаправление страницы на недоступный адрес. Проверьте настройки сети/прокси и повторите попытку.",
   "ui.language": "Язык",

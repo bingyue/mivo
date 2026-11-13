@@ -55,7 +55,7 @@ pub fn ensure(app_handle: &AppHandle) -> Result<CliLinkStatus, String> {
     // 开发（debug）构建不注册用户 PATH：bin 目录与 PATH 是共享的用户级状态，
     // 由生产版维护；开发版只写 shim（debug 下仅 pnpm shim，见 write_shims），
     // 既不增删 PATH 条目、也不覆盖生产的 dsh shim，避免干扰生产命令行集成。
-    if cfg!(debug_assertions) {
+    if cfg!(debug_assertions) || env!("DSH_APP_IDENTIFIER") == "com.mivo.desktop" {
         log::info!(
             "dsh/pnpm CLI shims ensured at {} (debug build: PATH registration skipped)",
             bin_dir.display()
@@ -92,7 +92,9 @@ pub fn remove(app_handle: &AppHandle) -> Result<CliLinkStatus, String> {
     // 否则终端与其它应用解析到的 `node` 仍是随包 Electron（issue #1486）。
     remove_shims(&bin_dir)?;
 
-    unregister_path(app_handle)?;
+    if env!("DSH_APP_IDENTIFIER") != "com.mivo.desktop" {
+        unregister_path(app_handle)?;
+    }
 
     log::info!("dsh/pnpm CLI links removed");
     Ok(get_status(app_handle))

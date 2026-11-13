@@ -1,0 +1,46 @@
+{
+  "name": "mivo-memory",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "cordis.patch.yml",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "dsh": "0.2.2-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "dsh-tauri": "workspace:*",
+    "dsh-h3": "catalog:",
+    "h3": "catalog:",
+    "zod": "catalog:utils"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:cli"
+  },
+  "author": "邴越",
+  "homepage": "https://FDEChina.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bingyue/mivo.git",
+    "directory": "packages/mivo-memory"
+  }
+}

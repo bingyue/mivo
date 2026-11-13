@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "platform": "darwin",
+  "transcript": " And so, my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+  "playback": {
+    "duration": 11,
+    "position": 0.456894
+  },
+  "backup": "<checkout>/.mivo-local/native-release/vault/backups/mivo-9b07ca3dc32e424f8b5d9dd487aa1f82.zip",
+  "mcp": {
+    "mcpServers": {
+      "mivo": {
+        "command": "<checkout>/apps/desktop/src-tauri/target/release/bundle/macos/Mivo.app/Contents/Resources/resources/mivo/core/mivo-core/mivo-core",
+        "args": [
+          "--mcp",
+          "--vault",
+          "<checkout>/.mivo-local/native-release/vault"
+        ]
+      }
+    }
+  },
+  "cloud_tested": false,
+  "publication_note": "Machine-specific checkout prefix redacted; original local acceptance result retained."
+}

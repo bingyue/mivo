@@ -1,0 +1,24 @@
+{
+  "kind": "real-frozen-core-local-ASR",
+  "audio_sha256": "ddd66c7696e66e1c3a1eccf016401183fe6cd741a7ca81d929cc1a6275aeff96",
+  "hardware": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "cpu": "arm",
+    "free_disk": 647575842816
+  },
+  "decoder": "PyAV / FFmpeg libraries",
+  "engine": "faster-whisper CPU int8",
+  "source_id": "bda050c73bfc4cda8ce905d16e02e0e7",
+  "transcript": " And so, my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 11.0,
+      "text": " And so, my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+      "speaker": null
+    }
+  ],
+  "cloud_called": false,
+  "automatic_memory_written": false
+}

@@ -1,5 +1,8 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: DeepSeek Harness 官方反馈
-    url: https://trtgsjkv6r.feishu.cn/share/base/form/shrcnlCoGElW7MQznGy9r3YYXcg?hide_uid=1&hide_device_info=1&hide_harness_version=1
-    about: 内核或官方 Harness 功能问题请通过官方表单反馈；桌面端问题请使用本仓库的 Issue 模板。
+  - name: Mivo 使用手册
+    url: https://github.com/bingyue/mivo/blob/main/mivo/README.md
+    about: 使用方式、模型配置和已知限制。
+  - name: FDE 前线
+    url: https://FDEChina.ai
+    about: 作者邴越（越哥聊AI）的 FDE 前线。

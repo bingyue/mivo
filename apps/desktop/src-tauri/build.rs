@@ -1,4 +1,8 @@
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    println!("cargo:rerun-if-env-changed=MIVO_DISTRIBUTION_MODE");
+    if std::env::var("MIVO_DISTRIBUTION_MODE").unwrap_or_else(|_| "personal_noncommercial".into()) != "personal_noncommercial" {
+        return Err("MIVO_DISTRIBUTION_BLOCKED: LICENSE.details prohibits commercial derivatives".into());
+    }
     let manifest_dir = std::env::var_os("CARGO_MANIFEST_DIR").unwrap();
     let manifest_dir = std::path::PathBuf::from(manifest_dir);
     // capability / permission 是编译期生成的 ACL；不声明依赖时改完 JSON cargo 不会重跑

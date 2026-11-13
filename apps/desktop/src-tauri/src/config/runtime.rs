@@ -453,7 +453,7 @@ pub(crate) fn dsh_data_path_from_env() -> PathBuf {
     let dir_name = if cfg!(debug_assertions) {
         DSH_HOME_DEV_DIR_NAME
     } else {
-        if let Some(home) = std::env::var_os("DSH_HOME")
+        if let Some(home) = std::env::var_os("MIVO_DSH_HOME")
             && !home.is_empty()
         {
             return PathBuf::from(home);

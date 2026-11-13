@@ -54,18 +54,18 @@ pub fn get_dsh_service_url(port: u16) -> String {
 }
 
 /// 生产（release）默认端口
-pub const DSH_PORT: u16 = 3080;
+pub const DSH_PORT: u16 = 3980;
 /// 开发（debug）默认端口：与生产隔离，避免 `pnpm tauri dev` 与已安装桌面端
 /// 争用同一个 3080 端口冲突。
-pub const DSH_DEV_PORT: u16 = 3081;
+pub const DSH_DEV_PORT: u16 = 3981;
 
 /// 官方 Harness 用户数据目录名：release 构建的 `$DSH_HOME` 默认目录（`~/.dsh`，
 /// 与官方 node 安装保持一致）。
-pub const DSH_HOME_DIR_NAME: &str = ".dsh";
+pub const DSH_HOME_DIR_NAME: &str = ".mivo-dsh";
 /// 开发（debug）构建的用户数据目录名（`~/.dsh.dev`）：与生产数据目录隔离。
 /// 会话、档案、插件与主题等数据各自独立——`pnpm tauri dev` 与已安装桌面端
 /// 同时运行时互不干扰，也不会互相污染对方的会话数据。
-pub const DSH_HOME_DEV_DIR_NAME: &str = ".dsh.dev";
+pub const DSH_HOME_DEV_DIR_NAME: &str = ".mivo-dsh.dev";
 
 /// 启动前的目录解析也读取有效构建配置，避免夜间版读写正式版日志和 Store。
 pub const APP_IDENTIFIER: &str = env!("DSH_APP_IDENTIFIER");

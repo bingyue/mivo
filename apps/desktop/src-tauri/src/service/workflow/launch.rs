@@ -922,6 +922,18 @@ pub(super) async fn launch_prepared(
 
     envs.insert("DSH_TAURI_EMBEDDED".to_string(), "0".to_string());
     envs.insert("DSH_TAURI_DESKTOP".to_string(), "1".to_string());
+    if env!("DSH_APP_IDENTIFIER") == "com.mivo.desktop"
+        && let Some(resources) = notifications.get().and_then(config::manifest::resource_root)
+    {
+        let executable = resources.join("mivo/core/mivo-core").join(if cfg!(windows) {
+            "mivo-core.exe"
+        } else {
+            "mivo-core"
+        });
+        if executable.is_file() {
+            envs.insert("MIVO_CORE_EXECUTABLE".to_string(), executable.to_string_lossy().into_owned());
+        }
+    }
     if let Some(version) = core_version.as_deref() {
         envs.insert("DSH_TAURI_CORE_VERSION".to_string(), version.to_string());
     }

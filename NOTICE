@@ -1,0 +1,20 @@
+Mivo — Your Personal AI Memory
+Copyright 2026 邴越 (bingyue) and Mivo contributors
+
+Author: 邴越
+Public creator identity: 越哥聊AI
+FDE 前线: https://FDEChina.ai
+Project: https://github.com/bingyue/mivo
+
+Apache-2.0 applies to the original Mivo code in mivo/ and
+packages/mivo-bundle/, packages/mivo-memory/, packages/mivo-workbench/,
+and the new Mivo project documentation and Mivo-specific CI workflows,
+except separately identified third-party material.
+
+The community desktop shell, modifications to its existing source files,
+and patches/mivo-desktop.patch remain subject to LICENSE and LICENSE.details.
+Apache-2.0 does not remove their restrictions or relicense third-party code.
+Official DeepSeek Harness and other dependencies retain their own licenses.
+See mivo/docs/licensing.md and mivo/THIRD_PARTY_NOTICES.md for scope.
+
+Mivo is an independent project and is not endorsed by DeepSeek.

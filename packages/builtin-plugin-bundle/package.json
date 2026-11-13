@@ -11,6 +11,9 @@
     "dsh-tauri-notification": "workspace:*",
     "dsh-tauri-remote": "workspace:*",
     "dsh-tauri-rightclick": "workspace:*",
-    "dsh-tauri-ui": "workspace:*"
+    "dsh-tauri-ui": "workspace:*",
+    "mivo-memory": "workspace:*",
+    "mivo-workbench": "workspace:*",
+    "mivo-bundle": "workspace:*"
   }
 }

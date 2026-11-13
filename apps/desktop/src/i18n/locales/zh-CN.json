@@ -1,7 +1,7 @@
 {
   "app.wordmark": "HARNESS",
   "app.retry": "重试",
-  "app.open_editor": "打开 DeepSeek Harness",
+  "app.open_editor": "打开 Mivo",
   "app.restart": "重启",
   "messages.harness_restarting": "正在重启 Harness…",
   "messages.harness_restarted": "Harness 重启成功",
@@ -160,7 +160,7 @@
   "ui.node_version": "Node.js",
   "ui.platform": "Platform",
   "ui.data_dir": "数据目录",
-  "ui.webview_error": "无法加载 DeepSeek Harness 界面。",
+  "ui.webview_error": "无法加载 Mivo 界面。",
   "ui.ensure_running": "请确认服务正在 {{url}} 运行。",
   "ui.webview_unreachable_hint": "服务本身运行正常，但内嵌页面没有加载成功：通常是系统代理或安全软件拦截了页面请求，也可能是页面被跳转到了访问不到的地址。检查网络/代理设置后点击重试即可。",
   "ui.language": "语言",

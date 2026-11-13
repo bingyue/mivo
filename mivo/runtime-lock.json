@@ -1,0 +1,47 @@
+{
+  "dsh": "0.2.2-rc.1",
+  "tag": "dsh-0.2.2-rc.1-43078653398",
+  "assets": {
+    "deepseek-harness-pkg-linux-arm64.asar.zip": {
+      "id": 736550893,
+      "size": 123257255,
+      "sha256": "775a440385845ff29819bb51ef673b5d6b82a8816c48ebb1e7da020f28489b53",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-linux-arm64.asar.zip"
+    },
+    "deepseek-harness-pkg-linux.asar.zip": {
+      "id": 736551395,
+      "size": 120748272,
+      "sha256": "82238469b02241a19b3ccde18bee3d681c4c13e73cd43d34deee71dfeb937f6e",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-linux.asar.zip"
+    },
+    "deepseek-harness-pkg-macos-arm64.asar.zip": {
+      "id": 736551908,
+      "size": 132548079,
+      "sha256": "f8582d7362863f6f0bdcce20d03eb510bc50c26aac854e4bde8d278a542eaf68",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-macos-arm64.asar.zip"
+    },
+    "deepseek-harness-pkg-macos-x64.asar.zip": {
+      "id": 736552373,
+      "size": 137526568,
+      "sha256": "a594056a012593ee2e2f95cf619909ff963ddeeec2db098fd0eabc760cfbe21e",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-macos-x64.asar.zip"
+    },
+    "deepseek-harness-pkg-windows-arm64.asar.zip": {
+      "id": 736553391,
+      "size": 118178094,
+      "sha256": "0ab868afb1cf26a40181c511ebf6a7395303327d923cd7ca792a6994810fa698",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-windows-arm64.asar.zip"
+    },
+    "deepseek-harness-pkg-windows.asar.zip": {
+      "id": 736553798,
+      "size": 131525008,
+      "sha256": "ccedcf9e0c1256359164cb2cd0040881e077ed56a327801bd24b6c8ec529866b",
+      "url": "https://github.com/dsh-tauri/deepseek-harness-pkg/releases/download/dsh-0.2.2-rc.1-43078653398/deepseek-harness-pkg-windows.asar.zip"
+    }
+  },
+  "asr": {
+    "repo": "Systran/faster-whisper-tiny",
+    "revision": "d90ca5fe260221311c53c58e660288d3deb8d356",
+    "license": "MIT"
+  }
+}

@@ -58,6 +58,9 @@ const UNIX_BIN_DIR: &str = ".local/bin";
 /// - Windows：`%LOCALAPPDATA%\deepseek-harness\bin`（用户级、不随应用数据目录变动）
 /// - Unix：`~/.local/bin`（XDG 约定，通常已在 PATH 中）
 pub fn get_bin_dir(app_handle: &AppHandle) -> PathBuf {
+    if env!("DSH_APP_IDENTIFIER") == "com.mivo.desktop" {
+        return crate::config::get_base_dir(app_handle).join("bin");
+    }
     #[cfg(windows)]
     {
         let local_data_dir = std::env::var_os("LOCALAPPDATA")

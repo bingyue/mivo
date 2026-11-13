@@ -1,7 +1,7 @@
 {
   "app.wordmark": "HARNESS",
   "app.retry": "Retry",
-  "app.open_editor": "Open DeepSeek Harness",
+  "app.open_editor": "Open Mivo",
   "app.restart": "Restart",
   "messages.harness_restarting": "Restarting Harness…",
   "messages.harness_restarted": "Harness restarted",
@@ -160,7 +160,7 @@
   "ui.node_version": "Node.js Runtime",
   "ui.platform": "Platform",
   "ui.data_dir": "Data Directory",
-  "ui.webview_error": "Cannot load the DeepSeek Harness interface.",
+  "ui.webview_error": "Cannot load the Mivo interface.",
   "ui.ensure_running": "Please make sure the service is running at {{url}}.",
   "ui.webview_unreachable_hint": "The service itself is running, but the embedded page never loaded. This is usually a system proxy or security tool blocking the request, or the page being redirected to an address that cannot be reached. Check your network/proxy settings, then retry.",
   "ui.language": "Language",

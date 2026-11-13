@@ -1,0 +1,15 @@
+{
+  "model": {
+    "id": "whisper-tiny",
+    "name": "Whisper tiny (multilingual)",
+    "license": "MIT",
+    "repository": "Systran/faster-whisper-tiny",
+    "revision": "d90ca5fe260221311c53c58e660288d3deb8d356",
+    "bytes": 78205610,
+    "path": "<checkout>/.mivo-local/download-vault/models/whisper-tiny"
+  },
+  "status": "passed",
+  "bytes_verified": true,
+  "auto_memory_count": 0,
+  "publication_note": "Machine-specific checkout prefix redacted; original local acceptance result retained."
+}

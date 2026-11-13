@@ -26,7 +26,7 @@ export default defineConfig({
     await ofetch.ts.dest(config)
   }),
   meta: { import: { http: 'dsh-tauri/client' } },
-  transform: { operation: name => name.replace(/ApiTauri(?:Extension|Rightclick|Archive|Model|Ui|Notification|Worktree|Bridge|Remote)/, '') },
+  transform: { operation: name => name.replace(/ApiTauri(?:Extension|Rightclick|Archive|Model|Ui|Notification|Worktree|Bridge|Remote|Mivo)/, '') },
   patch: { operations: { post: 'postWorktree', delete: 'deleteWorktree' } },
   servers: [...plugins.map(plugin => ({
     input: `${root}packages/builtin-plugin-${plugin}/src/host/server/index.ts`,
@@ -35,11 +35,17 @@ export default defineConfig({
       type: `${root}packages/builtin-plugin-${plugin}/src/client/apis/index.type.ts`,
     },
   })), {
+    input: `${root}packages/mivo-memory/src/host/server/index.ts`,
+    output: {
+      main: `${root}packages/mivo-workbench/src/client/apis/index.ts`,
+      type: `${root}packages/mivo-workbench/src/client/apis/index.type.ts`,
+    },
+  }, {
     input: `${root}packages/builtin-plugin-remote/src/host/server/index.ts`,
     meta: { import: { http: './http' } },
     output: {
       main: `${root}apps/desktop/src/apis/remote.ts`,
       type: `${root}apps/desktop/src/apis/remote.types.ts`,
     },
-  }],
+  }].filter(server => !process.env.MIVO_GENAPI || server.input.includes('/mivo-memory/')),
 })

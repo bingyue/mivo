@@ -1,0 +1,43 @@
+name: Mivo personal MVP
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      CI: 'true'
+      MIVO_DISTRIBUTION_MODE: personal_noncommercial
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.9.0'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.7.0'
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.11'
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm mivo:test
+      - run: pnpm mivo:prepare
+      - if: runner.os == 'macOS'
+        run: pnpm --filter dsh-desktop tauri build --bundles app,dmg --config src-tauri/tauri.macos-bundle.conf.json
+      - if: runner.os == 'Windows'
+        run: pnpm --filter dsh-desktop tauri build --bundles nsis
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mivo-personal-${{ runner.os }}
+          path: |
+            apps/desktop/src-tauri/target/release/bundle/dmg/*.dmg
+            apps/desktop/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error

@@ -47,7 +47,7 @@ pub fn distro_managed() -> bool {
 /// 唯一真值是设置页「自动更新」开关：关闭后只剩用户显式发起的链路（「检查更新」
 /// 与对话框里的「立即更新」），退出时不会拿已下载的安装包替换本应用（issue #1132）。
 pub(super) fn auto_update_enabled(app_handle: &crate::AppHandle) -> bool {
-    crate::config::get_store_dat_setting(app_handle).auto_update
+    env!("DSH_APP_IDENTIFIER") != "com.mivo.desktop" && crate::config::get_store_dat_setting(app_handle).auto_update
 }
 
 /// 丢弃「待安装」标记（用户关闭自动更新时调用）。

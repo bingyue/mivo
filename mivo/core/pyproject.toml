@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mivo-core"
+version = "0.1.0"
+description = "Local-first personal memory engine with ASR, SQLite, Markdown and read-only MCP"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "邴越"}]
+requires-python = ">=3.11,<3.14"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "python-multipart>=0.0.20,<1", "pydantic>=2.10,<3", "httpx>=0.28,<1", "pypdf>=5,<7", "python-docx>=1.1,<2", "mcp>=1.9,<2", "av>=16,<18"]
+
+[project.urls]
+Homepage = "https://FDEChina.ai"
+Repository = "https://github.com/bingyue/mivo"
+Issues = "https://github.com/bingyue/mivo/issues"
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.1,<2"]
+funasr = ["funasr>=1.2,<2", "torch>=2.6,<3", "torchaudio>=2.6,<3"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-timeout>=2,<3", "ruff>=0.11,<1", "pyinstaller>=6.12,<7"]
+
+[project.scripts]
+mivo-core = "mivo_core.__main__:main"
+mivo-mcp = "mivo_core.mcp_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+timeout = 45
+
+[tool.ruff]
+line-length = 110

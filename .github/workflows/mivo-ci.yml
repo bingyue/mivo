@@ -1,0 +1,36 @@
+name: Mivo Core CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mivo-core-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.9.0'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.11'
+          enable-cache: true
+          cache-dependency-glob: mivo/core/uv.lock
+      - run: uv sync --project mivo/core --locked --extra whisper
+      - run: uv run --project mivo/core --locked --extra whisper pytest -q -c mivo/core/pyproject.toml mivo/core/tests
+      - name: Check desktop distribution boundary
+        shell: bash
+        run: |
+          node mivo/scripts/distribution-guard.mjs
+          if MIVO_DISTRIBUTION_MODE=commercial node mivo/scripts/distribution-guard.mjs; then
+            echo 'Restricted desktop commercial build unexpectedly allowed'
+            exit 1
+          fi

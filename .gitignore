@@ -28,3 +28,21 @@ expo-env.d.ts
 *.aab
 *.jks
 *.keystore
+# Mivo private data and local tooling
+mivo/core/.venv/
+mivo/core/.pytest_cache/
+__pycache__/
+*.pyc
+.mivo-local/
+apps/desktop/src-tauri/resources/mivo/
+apps/desktop/src-tauri/resources/dsh/
+apps/desktop/src-tauri/resources/pnpm/
+MivoVault/
+*.sqlite*
+mivo/core/dist/
+!mivo/core/uv.lock
+.env.*
+!.env.example
+.credentials.yaml
+*.pem
+*.key

@@ -1053,6 +1053,15 @@ importers:
       dsh-tauri-ui:
         specifier: workspace:*
         version: link:../builtin-plugin-ui
+      mivo-bundle:
+        specifier: workspace:*
+        version: link:../mivo-bundle
+      mivo-memory:
+        specifier: workspace:*
+        version: link:../mivo-memory
+      mivo-workbench:
+        specifier: workspace:*
+        version: link:../mivo-workbench
 
   packages/builtin-plugin-config:
     devDependencies:
@@ -1375,6 +1384,53 @@ importers:
       tailwind-variants:
         specifier: catalog:runtime
         version: 3.3.1(tailwind-merge@3.7.0)(tailwindcss@4.3.3)
+      tsdown:
+        specifier: catalog:cli
+        version: 0.17.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(publint@0.3.25)(synckit@0.11.13)(typescript@5.8.3)
+
+  packages/mivo-bundle:
+    dependencies:
+      mivo-memory:
+        specifier: workspace:*
+        version: link:../mivo-memory
+      mivo-workbench:
+        specifier: workspace:*
+        version: link:../mivo-workbench
+
+  packages/mivo-memory:
+    dependencies:
+      dsh-h3:
+        specifier: 'catalog:'
+        version: 0.2.1(@deepseek-ai/cordis@4.1.0)(@deepseek-ai/dsh-host-webserver@0.2.2-rc.1(@deepseek-ai/cordis@4.1.0))(@genapi/shared@4.1.4)(typescript@5.8.3)
+      dsh-tauri:
+        specifier: workspace:*
+        version: link:../builtin-plugin-tauri
+      h3:
+        specifier: 'catalog:'
+        version: 2.0.1
+      zod:
+        specifier: catalog:utils
+        version: 4.6.7
+    devDependencies:
+      tsdown:
+        specifier: catalog:cli
+        version: 0.17.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(publint@0.3.25)(synckit@0.11.13)(typescript@5.8.3)
+
+  packages/mivo-workbench:
+    dependencies:
+      dsh-tauri:
+        specifier: workspace:*
+        version: link:../builtin-plugin-tauri
+      dsh-tauri-ui:
+        specifier: workspace:*
+        version: link:../builtin-plugin-ui
+      mivo-memory:
+        specifier: workspace:*
+        version: link:../mivo-memory
+      react:
+        specifier: catalog:runtime
+        version: 19.3.1
+    devDependencies:
       tsdown:
         specifier: catalog:cli
         version: 0.17.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(publint@0.3.25)(synckit@0.11.13)(typescript@5.8.3)

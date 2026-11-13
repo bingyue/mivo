@@ -30,6 +30,9 @@ use super::{DOWNLOAD_TIMEOUT_SECS, UPDATES_DIR};
 /// `download_desktop_update` 的调用方仍会先下载并登记「待安装」，退出应用时又把这个
 /// 白下的包拉起来。必须报错而不是返回 `Ok(None)`——后者会被读成「已是最新」。
 fn ensure_self_updatable() -> Result<(), String> {
+    if env!("DSH_APP_IDENTIFIER") == "com.mivo.desktop" {
+        return Err("MIVO_UPDATES_DISABLED: install a reviewed Mivo release manually".into());
+    }
     #[cfg(target_os = "linux")]
     if !self_updatable() {
         return Err(

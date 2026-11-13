@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "executable": "<checkout>/.mivo-local/installed/Mivo.app/Contents/MacOS/deepseek-harness-desktop",
+  "transcript": "And so, my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+  "restarted_existing_vault": true,
+  "isolated_dsh_environment": true,
+  "invalid_vault_switch_recovered": true,
+  "core_exited_on_normal_quit": true,
+  "publication_note": "Machine-specific checkout prefix redacted; original local acceptance result retained."
+}
